@@ -17,9 +17,9 @@ int main() {
     unsigned long num;
     cin >> num;
 
-    while (num < oldNum) {
-      num++;
-      ops++;
+    if (num < oldNum) {
+      ops += oldNum - num;
+      num = oldNum;
     }
 
     oldNum = num;
