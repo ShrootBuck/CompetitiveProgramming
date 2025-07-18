@@ -1,8 +1,3 @@
-
-
-#include <bits/stdc++.h>
-using namespace std;
-
 int main() {
   // Competition requirement is binding std IO to file IO
   freopen("promote.in", "r", stdin);

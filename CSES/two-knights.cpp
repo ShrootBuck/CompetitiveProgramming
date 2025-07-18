@@ -1,4 +1,3 @@
-
 // Had to review combinatorics for this lol
 #include <bits/stdc++.h>
 using namespace std;
