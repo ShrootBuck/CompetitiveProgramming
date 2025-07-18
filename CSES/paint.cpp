@@ -1,4 +1,4 @@
-// Source: https://usaco.guide/general/io
+
 //
 #include <bits/stdc++.h>
 #include <cstdio>

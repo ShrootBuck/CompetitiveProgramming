@@ -1,4 +1,4 @@
-// Source: https://usaco.guide/general/io
+
 // Permutations
 
 #include <bits/stdc++.h>
