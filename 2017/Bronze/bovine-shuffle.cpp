@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -8,22 +9,39 @@ int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
 
-  int N;
+  size_t N;
   cin >> N;
 
+  // Get every a[i]
   vector<int> a(N);
-  vector<int> cow_id(N);
 
   for (int i = 0; i < N; i++) {
     cin >> a[i];
-    cow_id[i] = 0;
   }
 
+  // Get every cow id in the final lineup
+  vector<int> lineup(N);
   for (int i = 0; i < N; i++) {
-    cin >> cow_id[a[i] - 1];
+    cin >> lineup[i];
   }
 
-  for (int id : cow_id) {
-    cout << id << "\n";
+  // unshuffle 3x
+  vector<int> unshuffled_lineup(N);
+
+  for (int j = 0; j < N; j++) {
+    int index = j;
+    for (int i = 0; i < 3; i++) {
+      auto it = find(a.begin(), a.end(), index + 1);
+      index = it - a.begin();
+      // cout << index << " ";
+    }
+
+    // cout << index << " ";
+    unshuffled_lineup[index] = lineup[j];
+  }
+
+  //   cout << "\n\n";
+  for (int cow : unshuffled_lineup) {
+    cout << cow << "\n";
   }
 }
