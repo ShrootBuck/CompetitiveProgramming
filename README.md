@@ -4,7 +4,7 @@ This repository serves as a personal storage for my USA Computing Olympiad (USAC
 
 ## Overview
 
-- **Solutions**: Code solutions to USACO problems, organized by year or platform.
+- **Solutions**: Code solutions to USACO problems, organized by year or platform. Some problems may have multiple solutions with different time complexities (e.g., an O(n²) brute force solution and an optimized O(n) approach).
 - **Whiteboardings**: PNG files of diagrams and sketches. Importantly, all PNG whiteboardings are embedded with Excalidraw information, allowing you to upload them directly to [Excalidraw](https://excalidraw.com) to access and edit the full vector data. Note that not all problems have associated whiteboards; usually, easier problems do not.
 
 Feel free to explore the directories for specific problem solutions and notes.
