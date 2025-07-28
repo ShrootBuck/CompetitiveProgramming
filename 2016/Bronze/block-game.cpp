@@ -20,32 +20,23 @@ int main() {
   array<int, 26> letters_count{};
 
   for (int i = 0; i < N; i++) {
-    map<char, int> alphabet1;
-    map<char, int> alphabet2;
 
     string word1, word2;
     cin >> word1 >> word2;
 
-    for (char character : word1) {
-      if (alphabet1.find(character) != alphabet1.end()) {
-        alphabet1[character]++;
-      } else {
-        alphabet1[character] = 1;
-      }
+    array<int, 26> freq1{};
+    array<int, 26> freq2{};
+
+    for (char c : word1) {
+      freq1[c - 'a']++;
     }
 
-    for (char character : word2) {
-      if (alphabet2.find(character) != alphabet2.end()) {
-        alphabet2[character]++;
-      } else {
-        alphabet2[character] = 1;
-      }
+    for (char c : word2) {
+      freq2[c - 'a']++;
     }
 
     for (int j = 0; j < 26; j++) {
-      char character = "abcdefghijklmnopqrstuvwxyz"[j];
-
-      letters_count[j] += max(alphabet1[character], alphabet2[character]);
+      letters_count[j] += max(freq1[j], freq2[j]);
     }
   }
 
