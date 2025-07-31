@@ -36,7 +36,6 @@ int main() {
     cin >> dir >> steps;
 
     for (int j = 0; j < steps; j++) {
-
       t++;
 
       switch (dir) {
@@ -54,6 +53,7 @@ int main() {
 
       case 'W':
         fj_x--;
+        break;
       }
 
       int current_patch = field[fj_x][fj_y];
