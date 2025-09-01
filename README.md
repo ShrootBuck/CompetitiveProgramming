@@ -4,7 +4,9 @@ This repository serves as a personal storage for my USA Computing Olympiad (USAC
 
 ## Overview
 
-- **Solutions**: Code solutions to USACO problems, organized by year or platform. Some problems may have multiple solutions with different time complexities (e.g., an O(n²) brute force solution and an optimized O(n) approach).
+- **Solutions**: Code solutions to USACO problems, organized by year or platform.
+  - For each problem, the first attempt is named with the base filename (e.g., `cownomics.cpp`).
+  - If I optimize or try a different approach, I create a new file with an incremented suffix (e.g., `cownomics-2.cpp`, `cownomics-3.cpp`).
 - **Whiteboardings**: PNG files of diagrams and sketches. Importantly, all PNG whiteboardings are embedded with Excalidraw information, allowing you to upload them directly to [Excalidraw](https://excalidraw.com) to access and edit the full vector data. Note that not all problems have associated whiteboards; usually, easier problems do not.
 
 Feel free to explore the directories for specific problem solutions and notes.
