@@ -1,5 +1,3 @@
-// Copy-paste central for USACO and competitive programming
-
 void setIO(string name = "") {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
