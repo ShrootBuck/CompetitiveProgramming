@@ -13,7 +13,5 @@ int main() {
   int b = numbers[1];
   int c = numbers[numbers.size() - 1] - a - b;
 
-  //   int c = numbers[
-
   cout << a << " " << b << " " << c;
 }
