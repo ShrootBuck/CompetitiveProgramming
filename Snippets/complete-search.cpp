@@ -5,6 +5,9 @@ vector<int> current_subset;
 void generate(int k) {
   if (k == n) {
     // Process the subset
+
+    // Then return!
+    return;
   }
 
   // Choice 1: "leave it"
