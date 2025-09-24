@@ -1,28 +1,22 @@
 int n;
-vector<int> current_subset;
+vector<int> current;
 
-// Recursive function to explore all subsets
-void generate(int k) {
+// Generic backtracking template
+void search(int k) {
   if (k == n) {
-    // Process the subset
-
-    // Then return!
+    // Process one full solution (current)
     return;
   }
 
-  // Choice 1: "leave it"
-  // We don't add item k to our subset and move on to the next item
-  generate(k + 1);
+  // For each choice option at step k
+  // (for subsets, the options are {skip, take})
+  for (int option : {0, 1}) {
+    if (option == 1)
+      current.push_back(k); // take
 
-  // Choice 2: "take it"
-  // We add item k to our subset
-  current_subset.push_back(k);
-  // ...and then move on to the next item
-  generate(k + 1);
-  // ...and then we MUST backtrack by removing it, to clean up the state
-  // for other branches of the recursion.
-  current_subset.pop_back();
+    search(k + 1);
+
+    if (option == 1)
+      current.pop_back(); // undo (backtrack)
+  }
 }
-
-// Kick off the recursion from the first item (index 0)
-// generate(0);
