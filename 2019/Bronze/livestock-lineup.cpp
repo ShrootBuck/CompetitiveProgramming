@@ -16,7 +16,9 @@ int n;
 vector<string> current = {
     "Beatrice", "Belinda", "Bella",     "Bessie",
     "Betsy",    "Blue",    "Buttercup", "Sue",
-}; // Alphabetically sorted cows
+}; // I sorted these alphabetically but just for completeness I will do that
+   // below too
+sort(current.begin(), current.end());
 vector<pair<string, string>> neighbors;
 
 bool check_valid() {
