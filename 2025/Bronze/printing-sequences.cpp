@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 #include <climits>
-#include <linux/limits.h>
 using namespace std;
 
 void newcase();
