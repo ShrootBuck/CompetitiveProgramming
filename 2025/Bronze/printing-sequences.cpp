@@ -21,7 +21,7 @@ int main() {
   int T;
   cin >> T;
 
-  for (int t = 0; t < T; t++) {
+  while (T--) {
     newcase();
     cout << "\n";
 
@@ -79,16 +79,16 @@ void newcase() {
   int N, K;
   cin >> N >> K;
 
-  // If K is 1 then all numbers are 1 and its a single REP
-  if (K == 1) {
-    cout << "YES";
-    return;
-  }
-
   vector<int> nums(N);
 
   for (int i = 0; i < N; i++) {
     cin >> nums[i];
+  }
+
+  // If K is 1 then all numbers are 1 and its a single REP
+  if (K == 1) {
+    cout << "YES";
+    return;
   }
 
   if (solve(0, N - 1, nums) <= K) {
