@@ -1,6 +1,4 @@
 #include <bits/stdc++.h>
-#include <unordered_map>
-#include <vector>
 using namespace std;
 
 void setIO(string name = "") {

@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <cmath>
 using namespace std;
 
 bool checkprime(const int &n) {

@@ -1,8 +1,4 @@
-#include <algorithm>
 #include <bits/stdc++.h>
-#include <map>
-#include <set>
-#include <utility>
 using namespace std;
 
 void setIO(string name = "") {

@@ -1,6 +1,4 @@
-#include <algorithm>
 #include <bits/stdc++.h>
-#include <iterator>
 using namespace std;
 
 void setIO(string name = "") {

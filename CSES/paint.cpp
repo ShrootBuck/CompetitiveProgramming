@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <cstdio>
 using namespace std;
 
 void setIO(string s) {
