@@ -1,17 +1,32 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+vector<string> solve(int n) {
+  if (n == 1) {
+    return {"0", "1"};
+  }
+
+  vector<string> a = solve(n - 1);
+  vector<string> b = a;
+  reverse(b.begin(), b.end());
+
+  for (int i = 0; i < a.size(); i++) {
+    a[i] = "0" + a[i];
+    b[i] = "1" + b[i];
+  }
+
+  a.insert(a.end(), b.begin(), b.end());
+
+  return a;
+}
+
 int main() {
-  size_t n;
+  int n;
   cin >> n;
 
-  for (unsigned long long i = 0; i < (1 << n); i++) {
-    bitset<32> b(i);
-    // only print the rightmost n bits
-    cout << b.to_string().substr(32 - n);
+  auto result = solve(n);
 
-    if (i != (1 << n) - 1) {
-      cout << "\n";
-    }
+  for (string code : result) {
+    cout << code << "\n";
   }
 }
