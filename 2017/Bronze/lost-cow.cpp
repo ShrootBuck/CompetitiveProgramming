@@ -1,6 +1,4 @@
-#include <cmath>
-#include <fstream>
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
