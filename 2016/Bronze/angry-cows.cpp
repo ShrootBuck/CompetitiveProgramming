@@ -50,13 +50,18 @@ int main() {
     // right
     int r = i;
     int radius_r = 1;
+
     while (true) {
       int new_r = r;
+
       while (new_r + 1 < N && x[new_r + 1] - x[r] <= radius_r) {
         new_r++;
       }
-      if (new_r == r)
+
+      if (new_r == r) {
         break;
+      }
+
       r = new_r;
       radius_r++;
     }
