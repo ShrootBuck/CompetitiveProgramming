@@ -1,3 +1,6 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 void setIO(string name = "") {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
@@ -6,3 +9,5 @@ void setIO(string name = "") {
     freopen((name + ".out").c_str(), "w", stdout);
   }
 }
+
+int main() { setIO(""); }
