@@ -32,17 +32,16 @@ int main() {
     for (int i = 0; i < n; i++) {
       int time_diff = requirements[i + 1].first - requirements[i].first;
 
-      int start_side = requirements[i].second;
-      int end_side = requirements[i + 1].second;
+      bool parity = requirements[i].second == requirements[i + 1].second;
 
       if (time_diff % 2 == 0) {
-        if (end_side == start_side) {
+        if (parity) {
           points += time_diff;
         } else {
           points += time_diff - 1;
         }
       } else {
-        if (end_side != start_side) {
+        if (!parity) {
           points += time_diff;
         } else {
           points += time_diff - 1;
