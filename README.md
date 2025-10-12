@@ -1,12 +1,13 @@
-# USACO Repository
+# Competitive Programming Repository
 
-This repository serves as a personal storage for my USA Computing Olympiad (USACO) materials, including solutions, notes, and whiteboard sketches.
+This repository serves as a personal archive for my competitive programming journey, including solutions, notes, and whiteboard sketches from various platforms.
 
 ## Overview
 
-- **Solutions**: Code solutions to USACO problems, organized by year or platform.
-  - For each problem, the first attempt is named with the base filename (e.g., `cownomics.cpp`).
-  - If I optimize or try a different approach, I create a new file with an incremented suffix (e.g., `cownomics-2.cpp`, `cownomics-3.cpp`).
+- **Solutions**: Code solutions to problems from platforms like USACO, Codeforces, CSES, Project Euler, and Advent of Code. The problems are organized by platform and then by contest or problem set.
+  - For each problem, the first correct solution is named with the base filename (e.g., `problem.cpp`).
+  - If I optimize or try a different approach, I create a new file with an incremented suffix (e.g., `problem-2.cpp`, `problem-3.cpp`).
+  - For problems that are sequels (e.g., "Blocked Billboard II"), the base filename includes the roman numeral (e.g., `blocked-billboard-ii.cpp`), and subsequent attempts follow the same pattern (e.g., `blocked-billboard-ii-2.cpp`).
 - **Whiteboardings**: PNG files of diagrams and sketches. Importantly, all PNG whiteboardings are embedded with Excalidraw information, allowing you to upload them directly to [Excalidraw](https://excalidraw.com) to access and edit the full vector data. Note that not all problems have associated whiteboards; usually, easier problems do not.
 
 Feel free to explore the directories for specific problem solutions and diagrams.
