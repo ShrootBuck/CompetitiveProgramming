@@ -1,4 +1,8 @@
-#include <bits/stdc++.h>
+#include <cstdio>
+#include <iostream>
+#include <string>
+#include <utility>
+#include <vector>
 using namespace std;
 
 void setIO(string name = "") {

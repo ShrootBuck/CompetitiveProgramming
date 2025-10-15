@@ -1,4 +1,9 @@
-#include <bits/stdc++.h>
+#include <cmath>
+#include <cstdlib>
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <vector>
 using namespace std;
 
 int sgn(int x) {
