@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 int main() {
@@ -11,7 +11,6 @@ int main() {
 
     a = b;
     b = next;
-    cout << b << "\n";
 
     if (b % 2 == 0) {
       total += b;
