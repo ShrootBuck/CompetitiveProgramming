@@ -3,7 +3,9 @@ ID: zayd1
 LANG: C++
 TASK: ride
 */
-#include <bits/stdc++.h>
+#include <cstdio>
+#include <iostream>
+#include <string>
 using namespace std;
 
 void setIO(string name = "") {
