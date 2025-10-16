@@ -1,4 +1,11 @@
-#include <bits/stdc++.h>
+#include <cstdio>
+#include <iostream>
+#include <map>
+#include <set>
+#include <string>
+#include <tuple>
+#include <utility>
+#include <vector>
 using namespace std;
 
 void setIO(string name = "") {

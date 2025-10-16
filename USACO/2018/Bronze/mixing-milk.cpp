@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+#include <algorithm>
+#include <cstdio>
+#include <iostream>
 using namespace std;
 
 struct bucket {

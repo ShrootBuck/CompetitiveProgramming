@@ -1,4 +1,8 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <array>
+#include <algorithm>
+#include <cstdio>
 using namespace std;
 
 int main() {
