@@ -1,0 +1,5 @@
+BasedOnStyle: LLVM
+Standard: c++20
+
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+# Will customize... eventually
