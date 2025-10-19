@@ -1,5 +1,6 @@
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+
 BasedOnStyle: LLVM
 Standard: c++17
 
-# https://clang.llvm.org/docs/ClangFormatStyleOptions.html
-# Will customize... eventually
+IndentWidth: 4
