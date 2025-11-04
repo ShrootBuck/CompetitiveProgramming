@@ -50,7 +50,7 @@ int main() {
         if (s[next_i] == s[i]) {
             // Case: BFFF...FFFB / EFFF...FFFE
 
-            if ((f_count + 2) % 2 == 0) {
+            if (f_count % 2 == 0) {
                 min_value++;
             }
 
@@ -58,7 +58,7 @@ int main() {
         } else {
             // Case: BFFF...FFFE / EFFF...FFFB
 
-            if ((f_count + 2) % 2 != 0) {
+            if (f_count % 2 != 0) {
                 min_value++;
             }
 
@@ -69,27 +69,27 @@ int main() {
     }
 
     // Special Case: Prefix/Suffix F
-    int beginning_f = 0;
-    int ending_f = 0;
+    int prefix_f = 0;
+    int suffix_f = 0;
 
-    while (beginning_f < N && s[beginning_f] == 'F') {
-        beginning_f++;
+    while (prefix_f < N && s[prefix_f] == 'F') {
+        prefix_f++;
     }
-    while (ending_f < N && s[N - 1 - ending_f] == 'F') {
-        ending_f++;
+    while (suffix_f < N && s[N - 1 - suffix_f] == 'F') {
+        suffix_f++;
     }
 
-    if (beginning_f == N) {
+    if (prefix_f == N) {
         // Special Case: Everything is an F
         min_value = 0;
         max_value = N - 1;
     } else {
-        max_value += beginning_f + ending_f;
+        max_value += prefix_f + suffix_f;
     }
 
     vector<int> candidates;
 
-    if (beginning_f == 0 && ending_f == 0) {
+    if (prefix_f == 0 && suffix_f == 0) {
         // Special Case: We can only change in increments of two
         for (int i = min_value; i <= max_value; i += 2) {
             candidates.push_back(i);
