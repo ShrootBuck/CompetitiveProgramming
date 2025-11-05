@@ -21,3 +21,7 @@ To edit a whiteboard PNG:
 1. Download the PNG file
 2. Go to [Excalidraw](https://excalidraw.com)
 3. Upload the PNG to import the embedded data
+
+## A Note on Commit Timestamps
+
+You might see a commit timestamp that makes it look like I posted a solution during a contest. That's just because I commit locally while I'm working. I don't actually push anything to GitHub until after the contest is over.
