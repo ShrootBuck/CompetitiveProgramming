@@ -21,13 +21,11 @@ void solve() {
     string c;
     cin >> c;
 
-    int e = 0, o = 0;
+    int o = 0;
 
     for (int i = 0; i < N; i++) {
         o += c[i] == 'O';
     }
-
-    e = N - o;
 
     if (o % 2 == N % 2) {
         cout << "YES\n";
