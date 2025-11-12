@@ -1,6 +1,6 @@
 class Solution {
   public:
-    bool containsDuplicate(vector<int> &nums) {
+    bool containsDuplicate(vector<int>& nums) {
         unordered_set<int> nobbers;
 
         for (int nobber : nums) {

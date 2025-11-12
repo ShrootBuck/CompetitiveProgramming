@@ -15,10 +15,10 @@ void setIO(string name = "") {
     }
 }
 
-bool is_lucky(int &a) {
+bool is_lucky(int& a) {
     string s = to_string(a);
 
-    for (auto &c : s) {
+    for (auto& c : s) {
         if (c != '4' && c != '7') {
             return false;
         }

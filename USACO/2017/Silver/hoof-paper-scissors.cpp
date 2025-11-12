@@ -16,7 +16,7 @@ void setIO(string name = "") {
     }
 }
 
-int max_wins(vector<int> &top, vector<int> &bottom) {
+int max_wins(vector<int>& top, vector<int>& bottom) {
     int max_top = max(max(top[0], top[1]), top[2]);
     int max_bottom = max(max(bottom[0], bottom[1]), bottom[2]);
 

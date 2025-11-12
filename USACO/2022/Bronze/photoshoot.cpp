@@ -33,8 +33,7 @@ int main() {
             continue;
         }
 
-        if ((sub == "GH" && reversals % 2 == 0) ||
-            (sub == "HG" && reversals % 2 == 1)) {
+        if ((sub == "GH" && reversals % 2 == 0) || (sub == "HG" && reversals % 2 == 1)) {
             reversals++;
         }
     }

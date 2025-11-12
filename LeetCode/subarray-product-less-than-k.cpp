@@ -1,6 +1,6 @@
 class Solution {
   public:
-    int numSubarrayProductLessThanK(vector<int> &nums, int k) {
+    int numSubarrayProductLessThanK(vector<int>& nums, int k) {
         int total = 0;
         long long prod = 1;
 

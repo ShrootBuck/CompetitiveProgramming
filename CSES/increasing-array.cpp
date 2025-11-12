@@ -3,25 +3,25 @@
 using namespace std;
 
 int main() {
-  unsigned long n;
+    unsigned long n;
 
-  cin >> n;
-  unsigned long ops = 0;
-  unsigned long oldNum;
+    cin >> n;
+    unsigned long ops = 0;
+    unsigned long oldNum;
 
-  cin >> oldNum;
+    cin >> oldNum;
 
-  for (unsigned long i = 1; i < n; i++) {
-    unsigned long num;
-    cin >> num;
+    for (unsigned long i = 1; i < n; i++) {
+        unsigned long num;
+        cin >> num;
 
-    if (num < oldNum) {
-      ops += oldNum - num;
-      num = oldNum;
+        if (num < oldNum) {
+            ops += oldNum - num;
+            num = oldNum;
+        }
+
+        oldNum = num;
     }
 
-    oldNum = num;
-  }
-
-  cout << ops;
+    cout << ops;
 }

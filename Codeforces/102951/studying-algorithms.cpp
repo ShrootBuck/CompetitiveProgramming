@@ -33,7 +33,7 @@ int main() {
     int time_spent = 0;
     int algos = 0;
 
-    for (int &b : a) {
+    for (int& b : a) {
         if (time_spent + b <= X) {
             time_spent += b;
             algos++;

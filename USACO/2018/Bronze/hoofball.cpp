@@ -49,15 +49,14 @@ int main() {
     int ans = 0;
 
     // First part of answer is simply indegree=0 cows
-    for (int &in : indegree) {
+    for (int& in : indegree) {
         ans += in == 0;
     }
 
     // Second part is # of isolated cycles
 
     for (int i = 0; i < N - 1; i++) {
-        if (to[i] == i + 1 && to[i + 1] == i && indegree[i] == 1 &&
-            indegree[i + 1] == 1) {
+        if (to[i] == i + 1 && to[i + 1] == i && indegree[i] == 1 && indegree[i + 1] == 1) {
             ans++;
         }
     }

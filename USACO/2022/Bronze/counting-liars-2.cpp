@@ -1,44 +1,44 @@
-#include <iostream>
-#include <vector>
-#include <utility>
 #include <algorithm>
+#include <iostream>
+#include <utility>
+#include <vector>
 using namespace std;
 
 int main() {
-  size_t N;
-  cin >> N;
+    size_t N;
+    cin >> N;
 
-  size_t liars = 0;
+    size_t liars = 0;
 
-  vector<pair<int, char>> sightings{};
+    vector<pair<int, char>> sightings{};
 
-  for (int i = 0; i < N; i++) {
-    char dir;
-    int p;
-    cin >> dir;
-    cin >> p;
+    for (int i = 0; i < N; i++) {
+        char dir;
+        int p;
+        cin >> dir;
+        cin >> p;
 
-    sightings.push_back({p, dir});
+        sightings.push_back({p, dir});
 
-    if (dir == 'G') {
-      liars++;
-    }
-  }
-
-  sort(sightings.begin(), sightings.end());
-
-  size_t local_liars = liars;
-
-  for (int i = 0; i < N; i++) {
-
-    if (sightings[i].second == 'G') {
-      local_liars--;
-    } else {
-      local_liars++;
+        if (dir == 'G') {
+            liars++;
+        }
     }
 
-    liars = min(liars, local_liars);
-  }
+    sort(sightings.begin(), sightings.end());
 
-  cout << liars;
+    size_t local_liars = liars;
+
+    for (int i = 0; i < N; i++) {
+
+        if (sightings[i].second == 'G') {
+            local_liars--;
+        } else {
+            local_liars++;
+        }
+
+        liars = min(liars, local_liars);
+    }
+
+    cout << liars;
 }

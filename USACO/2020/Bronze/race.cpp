@@ -27,7 +27,7 @@ int main() {
         cin >> X[i];
     }
 
-    for (ll &x : X) {
+    for (ll& x : X) {
         int t = 0;
         int accelerate_distance = 0, decelerate_distance = 0;
         int speed = 1;

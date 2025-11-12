@@ -30,7 +30,7 @@ int main() {
     cin >> s;
 
     for (int i = 0; i < N; i++) {
-        auto &c = s[i];
+        auto& c = s[i];
 
         bounds[c].first = min(bounds[c].first, i);
         bounds[c].second = max(bounds[c].second, i);

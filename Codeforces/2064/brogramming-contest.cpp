@@ -24,7 +24,7 @@ void solve() {
     bool all_zero = true;
     bool all_one = true;
 
-    for (char &c : s) {
+    for (char& c : s) {
         if (c == '0') {
             all_one = false;
         } else {
@@ -46,7 +46,7 @@ void solve() {
 
     int groups = 0;
 
-    for (auto &c : s) {
+    for (auto& c : s) {
         if (c != last) {
             groups++;
         }

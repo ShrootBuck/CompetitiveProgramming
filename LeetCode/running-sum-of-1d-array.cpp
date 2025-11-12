@@ -1,6 +1,6 @@
 class Solution {
   public:
-    vector<int> runningSum(vector<int> &nums) {
+    vector<int> runningSum(vector<int>& nums) {
         // So basically, a prefix sum.
         auto prefix = nums;
 

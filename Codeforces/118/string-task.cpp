@@ -23,7 +23,7 @@ int main() {
     cin >> s;
     unordered_set<char> vowels{'a', 'e', 'i', 'o', 'u', 'y'};
 
-    for (auto &c : s) {
+    for (auto& c : s) {
         c = tolower(c);
 
         if (vowels.count(c) == 0) {

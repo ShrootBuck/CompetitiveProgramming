@@ -25,7 +25,7 @@ void solve() {
     int need_protection = 0;
 
     for (int i = 0; i < n; i++) {
-        auto &c = s[i];
+        auto& c = s[i];
 
         if (c == '1') {
             if (protection_remaining <= 0) {

@@ -3,11 +3,11 @@ class Solution {
     bool canConstruct(string ransomNote, string magazine) {
         unordered_map<char, int> toolbox;
 
-        for (auto &c : magazine) {
+        for (auto& c : magazine) {
             toolbox[c]++;
         }
 
-        for (auto &c : ransomNote) {
+        for (auto& c : ransomNote) {
             if (toolbox[c] == 0) {
                 return false;
             }

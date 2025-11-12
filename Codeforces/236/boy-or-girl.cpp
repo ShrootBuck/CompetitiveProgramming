@@ -23,7 +23,7 @@ int main() {
 
     set<char> unique;
 
-    for (auto &c : s) {
+    for (auto& c : s) {
         unique.insert(c);
     }
 

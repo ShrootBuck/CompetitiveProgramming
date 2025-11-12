@@ -39,7 +39,7 @@ int main() {
     int expected = -1;
 
     for (int i = N - 1; i >= 0; i--) {
-        int &breakout = breakouts[i];
+        int& breakout = breakouts[i];
 
         if (expected != -1 && breakout != -1 && expected != breakout) {
             cout << -1;
