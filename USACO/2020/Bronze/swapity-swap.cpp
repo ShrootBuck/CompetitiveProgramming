@@ -1,6 +1,5 @@
 #include <cstdio>
 #include <iostream>
-#include <numeric>
 #include <string>
 #include <vector>
 using namespace std;
@@ -22,9 +21,6 @@ int main() {
     int N, K, A1, A2, B1, B2;
     cin >> N >> K >> A1 >> A2 >> B1 >> B2;
     A1--, A2--, B1--, B2--;
-
-    vector<int> arr(N);
-    iota(arr.begin(), arr.end(), 1);
 
     vector<int> destination(N);
 
@@ -68,12 +64,12 @@ int main() {
         }
     }
 
-    vector<int> results(N);
+    vector<int> result(N);
     for (int i = 0; i < N; i++) {
-        results[final_pos[i]] = arr[i];
+        int end_pos = final_pos[i];
+        result[end_pos] = i + 1;
     }
-
-    for (int& result : results) {
-        cout << result << "\n";
+    for (int& res : result) {
+        cout << res << "\n";
     }
 }
