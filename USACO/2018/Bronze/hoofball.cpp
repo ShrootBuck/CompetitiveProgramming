@@ -37,7 +37,7 @@ int main() {
             to[i] = 1;
         } else if (i == N - 1) {
             to[i] = N - 2;
-        } else if (x[i + 1] - x[i] > x[i] - x[i - 1]) {
+        } else if (x[i + 1] - x[i] >= x[i] - x[i - 1]) {
             to[i] = i - 1;
         } else {
             to[i] = i + 1;
