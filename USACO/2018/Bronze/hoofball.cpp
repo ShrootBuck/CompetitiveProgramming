@@ -30,17 +30,17 @@ int main() {
 
     sort(x.begin(), x.end());
 
-    vector<int> to(N), indegree(N, 0);
+    vector<int> to(N), indegree(N);
 
     for (int i = 0; i < N; i++) {
         if (i == 0) {
-            to[i] = i + 1;
+            to[i] = 1;
         } else if (i == N - 1) {
+            to[i] = N - 2;
+        } else if (x[i + 1] - x[i] > x[i] - x[i - 1]) {
             to[i] = i - 1;
         } else {
-            int left_distance = x[i] - x[i - 1];
-            int right_distance = x[i + 1] - x[i];
-            to[i] = left_distance <= right_distance ? i - 1 : i + 1;
+            to[i] = i + 1;
         }
 
         indegree[to[i]]++;
@@ -53,8 +53,7 @@ int main() {
         ans += in == 0;
     }
 
-    // Second part is # of isolated cycles
-
+    // Second part of answer are cow glaze cycles
     for (int i = 0; i < N - 1; i++) {
         if (to[i] == i + 1 && to[i + 1] == i && indegree[i] == 1 && indegree[i + 1] == 1) {
             ans++;
