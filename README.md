@@ -23,4 +23,4 @@ To edit a whiteboard PNG:
 
 ## A Note on Commit Timestamps
 
-You might see a commit timestamp that makes it look like I posted a solution during a contest. That's just because I commit locally while I'm working. I don't actually push anything to GitHub until after the contest is over.
+You might see a commit timestamp that makes it look like I posted a solution during a contest. That's just because I commit locally while I'm working. I don't actually push anything to GitHub until after the contest is over, and I also try to delay my local commits until after the contest to avoid this entirely.
