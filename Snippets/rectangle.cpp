@@ -1,3 +1,5 @@
+#include <algorithm>
+
 struct Rectangle {
     long long x1, y1, x2, y2;
 
@@ -13,10 +15,10 @@ struct Rectangle {
     }
 
     Rectangle intersection(const Rectangle& other) const {
-        long long inter_x1 = max(x1, other.x1);
-        long long inter_y1 = max(y1, other.y1);
-        long long inter_x2 = min(x2, other.x2);
-        long long inter_y2 = min(y2, other.y2);
+        long long inter_x1 = std::max(x1, other.x1);
+        long long inter_y1 = std::max(y1, other.y1);
+        long long inter_x2 = std::min(x2, other.x2);
+        long long inter_y2 = std::min(y2, other.y2);
 
         if (inter_x1 < inter_x2 && inter_y1 < inter_y2) {
             return Rectangle(inter_x1, inter_y1, inter_x2, inter_y2);
