@@ -1,72 +1,55 @@
-#include <cstdio>
+// My editorial!!
+// http://usaco.guide/problems/cses-3399-raab-game-i/solution
+
 #include <iostream>
-#include <string>
 using namespace std;
-
-#define ll long long
-
-void setIO(string name = "") {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    if (!name.empty()) {
-        freopen((name + ".in").c_str(), "r", stdin);
-        freopen((name + ".out").c_str(), "w", stdout);
-    }
-}
 
 void solve() {
     int n, a, b;
     cin >> n >> a >> b;
 
-    int draws = n - a - b;
+    int draws = n - (a + b);
+
+    // Impossible if we need more draws than cards available
     if (draws < 0) {
-        cout << "NO";
+        cout << "NO" << "\n";
         return;
     }
 
-    n -= draws;
-    if (n < 0) {
-        cout << "NO";
+    // Impossible if one player implies a total victory on non-draw cards
+    int k = n - draws;
+    if (k > 0 && (a == 0 || b == 0)) {
+        cout << "NO" << "\n";
         return;
     }
 
-    if (n != 0 && (a == n || b == n)) {
-        cout << "NO";
-        return;
-    }
+    cout << "YES" << "\n";
 
-    cout << "YES\n";
-
-    // Player A just throws it all out
-    for (int i = 1; i <= n + draws; i++) {
+    // Player 1: Plays 1..k (winning/losing rounds), then k+1..n (draws)
+    for (int i = 1; i <= n; i++) {
         cout << i << " ";
     }
-
     cout << "\n";
 
-    // Player B
-    for (int i = 1; i <= n; i++) {
-        int x = i + a;
-        if (x > n) {
-            x -= n;
-        }
-        cout << x << " ";
+    // Player 2: Cyclic shift for first k cards
+    for (int i = 1; i <= k; i++) {
+        // Shift by a and wrap around
+        int val = i + a;
+        if (val > k)
+            val -= k;
+        cout << val << " ";
     }
 
-    // Player B's draw cards
-    for (int i = n + 1; i <= n + draws; i++) {
+    // Player 2: Matches the draw cards exactly
+    for (int i = k + 1; i <= n; i++) {
         cout << i << " ";
     }
+    cout << "\n";
 }
 
 int main() {
-    setIO();
-
     int t;
     cin >> t;
-
-    while (t--) {
+    while (t--)
         solve();
-        cout << "\n";
-    }
 }
