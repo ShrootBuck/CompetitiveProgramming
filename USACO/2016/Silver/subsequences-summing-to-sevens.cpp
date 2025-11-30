@@ -21,11 +21,6 @@ int main() {
     int N;
     cin >> N;
 
-    vector<int> cows(N);
-    for (int i = 0; i < N; i++) {
-        cin >> cows[i];
-    }
-
     int range = 0;
     vector<int> first(7, -1);
     first[0] = 0;
