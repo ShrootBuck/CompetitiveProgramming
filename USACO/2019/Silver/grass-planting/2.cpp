@@ -1,0 +1,41 @@
+#include <cstdio>
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+#define ll long long
+
+void setIO(string name = "") {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    if (!name.empty()) {
+        freopen((name + ".in").c_str(), "r", stdin);
+        freopen((name + ".out").c_str(), "w", stdout);
+    }
+}
+
+int main() {
+    setIO("planting");
+
+    int N;
+    cin >> N;
+
+    vector<int> deg(N, 0);
+    for (int i = 0; i < N - 1; i++) {
+        int a, b;
+        cin >> a >> b;
+        a--;
+        b--;
+
+        deg[a]++;
+        deg[b]++;
+    }
+
+    int ans = 1;
+    for (int i = 0; i < N; i++) {
+        ans = max(ans, deg[i] + 1);
+    }
+
+    cout << ans;
+}
