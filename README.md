@@ -6,7 +6,7 @@ This repository serves as a personal archive for my competitive programming jour
 
 - **Solutions**: Code solutions to problems from platforms like USACO, Codeforces, CSES, LeetCode, Project Euler, and Advent of Code. The problems are organized by platform and then by contest or problem set.
   - If a problem consists of a single file, it is simply named with the problem name (e.g., `problem.cpp`).
-  - If a problem has multiple associated files (such as whiteboard sketches or multiple solution versions) it's stored in a folder named after the problem. Inside, you might find files like `problem/1.cpp`, `problem/2.cpp`, and `problem/Sketch.png`. Note that these numbered solutions are incremental; `2.cpp` is an optimized and/or improved version of `1.cpp`.
+  - If a problem has multiple associated files (such as whiteboard sketches or multiple solution versions) it's stored in a folder named after the problem. Inside, you might find files like `problem/1.cpp`, `problem/2.cpp`, and `problem/Sketch.png`. Note that these numbered solutions are incremental; `2.cpp` is (usually) an optimized and/or improved version of `1.cpp`. If not, it's just a later retry of the problem.
 - **Whiteboardings**: PNG files of diagrams and sketches. Importantly, all PNG whiteboardings are embedded with Excalidraw information, allowing you to upload them directly to [Excalidraw](https://excalidraw.com) to access and edit the full vector data. Note that not all problems have associated whiteboards; usually, easier problems do not.
 
 Feel free to explore the directories for specific problem solutions and diagrams.
