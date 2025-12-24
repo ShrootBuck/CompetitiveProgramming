@@ -43,9 +43,5 @@ int main() {
         }
     }
 
-    //   for (auto paire : events) {
-    //     cout << paire.first << " " << paire.second << "\n";
-    //   }
-
     cout << events[events.size() - 1].second;
 }
