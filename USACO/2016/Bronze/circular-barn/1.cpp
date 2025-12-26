@@ -6,39 +6,42 @@
 #include <vector>
 using namespace std;
 
+using ll = long long;
+
 void setIO(string name = "") {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(0)->sync_with_stdio(0);
+
     if (!name.empty()) {
         freopen((name + ".in").c_str(), "r", stdin);
         freopen((name + ".out").c_str(), "w", stdout);
     }
+#ifdef LOCAL_RUN
+    else {
+        freopen("f.in", "r", stdin);
+        freopen("f.out", "w", stdout);
+    }
+#endif
 }
 
 int main() {
     setIO("cbarn");
 
-    int N;
-    cin >> N;
+    ll n;
+    cin >> n;
 
-    vector<int> capacities(N);
+    vector<ll> r(n);
+    for (ll i = 0; i < n; i++)
+        cin >> r[i];
 
-    for (int i = 0; i < N; i++) {
-        cin >> capacities[i];
-    }
-
-    long long min_steps = LLONG_MAX;
-
-    for (int i = 0; i < N; i++) {
-
-        long long current_steps = 0;
-
-        for (int j = 0; j < N; j++) {
-            current_steps += capacities[(j + i) % N] * j;
+    ll distance = LLONG_MAX;
+    for (ll i = 0; i < n; i++) {
+        ll local_distance = 0;
+        for (ll j = 0; j < n; j++) {
+            local_distance += j * r[(i + j) % n];
         }
 
-        min_steps = min(min_steps, current_steps);
+        distance = min(distance, local_distance);
     }
 
-    cout << min_steps;
+    cout << distance;
 }
