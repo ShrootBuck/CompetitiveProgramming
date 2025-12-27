@@ -1,5 +1,5 @@
 #include <algorithm>
-#include <cmath>
+#include <climits>
 #include <cstdio>
 #include <cstdlib>
 #include <iostream>
@@ -8,47 +8,56 @@
 #include <vector>
 using namespace std;
 
+using ll = long long;
+
 void setIO(string name = "") {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(0)->sync_with_stdio(0);
+
     if (!name.empty()) {
         freopen((name + ".in").c_str(), "r", stdin);
         freopen((name + ".out").c_str(), "w", stdout);
     }
+#ifdef LOCAL_RUN
+    else {
+        freopen("f.in", "r", stdin);
+        freopen("f.out", "w", stdout);
+    }
+#endif
 }
 
 int main() {
     setIO("triangles");
 
-    size_t N;
+    ll N;
     cin >> N;
 
-    vector<pair<int, int>> coordinates;
-    for (size_t i = 0; i < N; i++) {
-        int x, y;
-        cin >> x >> y;
-        coordinates.push_back({x, y});
-    }
+    vector<pair<ll, ll>> points(N);
+    for (ll i = 0; i < N; i++)
+        cin >> points[i].first >> points[i].second;
 
-    size_t biggest_area = 0;
+    ll ans = LLONG_MIN;
+    for (ll i = 0; i < N; i++) {
+        for (ll j = 0; j < N; j++) {
+            for (ll k = 0; k < N; k++) {
+                if (i == j || j == k || i == k)
+                    continue;
 
-    for (size_t i = 0; i < N; i++) {
-        size_t max_base = 0;
-        size_t max_height = 0;
+                ll local_ans;
+                if ((points[i].first == points[j].first && points[i].second == points[k].second)) {
+                    local_ans = abs(points[i].second - points[j].second) *
+                                abs(points[i].first - points[k].first);
+                } else if ((points[i].second == points[j].second &&
+                            points[i].first == points[k].first)) {
+                    local_ans = abs(points[i].first - points[j].first) *
+                                abs(points[i].second - points[k].second);
+                } else {
+                    continue;
+                }
 
-        for (size_t j = 0; j < N; j++) {
-            if (coordinates[i].first == coordinates[j].first) {
-                max_height =
-                    max(max_height, (size_t)abs(coordinates[i].second - coordinates[j].second));
-            }
-
-            if (coordinates[i].second == coordinates[j].second) {
-                max_base = max(max_base, (size_t)abs(coordinates[i].first - coordinates[j].first));
+                ans = max(ans, local_ans);
             }
         }
-
-        biggest_area = max(biggest_area, max_base * max_height);
     }
 
-    cout << biggest_area;
+    cout << ans;
 }
