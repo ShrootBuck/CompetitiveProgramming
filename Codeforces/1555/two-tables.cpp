@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <cfloat>
+#include <climits>
 #include <cstdio>
 #include <iostream>
 #include <string>
@@ -20,7 +21,7 @@ ll solve() {
     ll W, H, x1, y1, x2, y2, w, h;
     cin >> W >> H >> x1 >> y1 >> x2 >> y2 >> w >> h;
 
-    ll ans = DBL_MAX;
+    ll ans = LLONG_MAX;
     bool valid = false;
 
     if (w + x2 - x1 <= W) {
