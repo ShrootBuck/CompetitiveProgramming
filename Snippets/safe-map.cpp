@@ -1,7 +1,5 @@
-#include <chrono>
-#include <cstddef>
-#include <cstdint>
-#include <unordered_map>
+#include <bits/stdc++.h>
+
 
 struct custom_hash {
     static uint64_t splitmix64(uint64_t x) {

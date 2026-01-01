@@ -1,6 +1,5 @@
-#include <algorithm>
-#include <iostream>
-#include <string>
+#include <bits/stdc++.h>
+
 using namespace std;
 
 bool check_palindrome(int n) {

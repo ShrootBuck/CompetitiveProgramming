@@ -1,9 +1,5 @@
-#include <cmath>
-#include <cstdio>
-#include <cstdlib>
-#include <iostream>
-#include <string>
-#include <unordered_map>
+#include <bits/stdc++.h>
+
 using namespace std;
 
 void setIO(string name = "") {

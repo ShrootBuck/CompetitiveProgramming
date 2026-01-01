@@ -1,7 +1,5 @@
-#include <algorithm>
-#include <iostream>
-#include <string>
-#include <vector>
+#include <bits/stdc++.h>
+
 using namespace std;
 
 vector<string> solve(int n) {

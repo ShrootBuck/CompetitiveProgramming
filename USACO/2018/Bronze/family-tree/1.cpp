@@ -1,8 +1,5 @@
-#include <cstdio>
-#include <iostream>
-#include <string>
-#include <unordered_map>
-#include <utility>
+#include <bits/stdc++.h>
+
 using namespace std;
 
 #define ll long long

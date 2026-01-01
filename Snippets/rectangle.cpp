@@ -1,4 +1,5 @@
-#include <algorithm>
+#include <bits/stdc++.h>
+
 
 struct Rectangle {
     long long x1, y1, x2, y2;

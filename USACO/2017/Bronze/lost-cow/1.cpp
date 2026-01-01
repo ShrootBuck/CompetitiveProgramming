@@ -1,7 +1,5 @@
-#include <cmath>
-#include <cstdlib>
-#include <fstream>
-#include <iostream>
+#include <bits/stdc++.h>
+
 
 using namespace std;
 

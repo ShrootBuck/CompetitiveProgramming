@@ -1,10 +1,5 @@
-#include <algorithm>
-#include <cstdio>
-#include <iostream>
-#include <iterator>
-#include <set>
-#include <string>
-#include <vector>
+#include <bits/stdc++.h>
+
 using namespace std;
 
 using ll = long long;

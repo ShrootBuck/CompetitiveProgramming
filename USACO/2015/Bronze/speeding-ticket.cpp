@@ -1,8 +1,5 @@
-#include <algorithm>
-#include <array>
-#include <cstdio>
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
+
 using namespace std;
 
 int main() {

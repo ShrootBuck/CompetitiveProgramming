@@ -1,9 +1,5 @@
-#include <algorithm>
-#include <cstdio>
-#include <iostream>
-#include <numeric>
-#include <string>
-#include <vector>
+#include <bits/stdc++.h>
+
 using namespace std;
 
 using ll = long long;

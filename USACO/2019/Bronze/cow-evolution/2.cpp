@@ -1,7 +1,5 @@
-#include <cstdio>
-#include <iostream>
-#include <set>
-#include <string>
+#include <bits/stdc++.h>
+
 using namespace std;
 
 #define ll long long

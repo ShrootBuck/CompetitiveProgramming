@@ -1,11 +1,5 @@
-#include <algorithm>
-#include <cstdio>
-#include <functional>
-#include <iostream>
-#include <queue>
-#include <string>
-#include <utility>
-#include <vector>
+#include <bits/stdc++.h>
+
 using namespace std;
 
 using ll = long long;

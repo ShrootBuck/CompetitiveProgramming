@@ -1,8 +1,5 @@
-#include <cctype>
-#include <cstdio>
-#include <iostream>
-#include <string>
-#include <unordered_set>
+#include <bits/stdc++.h>
+
 using namespace std;
 
 #define ll long long

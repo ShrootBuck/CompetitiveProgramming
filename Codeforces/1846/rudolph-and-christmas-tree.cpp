@@ -1,8 +1,5 @@
-#include <cstdio>
-#include <iomanip>
-#include <iostream>
-#include <string>
-#include <vector>
+#include <bits/stdc++.h>
+
 using namespace std;
 
 #define ll long long

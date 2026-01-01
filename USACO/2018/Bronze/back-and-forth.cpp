@@ -1,8 +1,5 @@
-#include <cstdio>
-#include <iostream>
-#include <set>
-#include <string>
-#include <vector>
+#include <bits/stdc++.h>
+
 using namespace std;
 
 int tank1 = 1000;

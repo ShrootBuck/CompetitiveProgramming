@@ -8,6 +8,7 @@ This repository serves as a personal archive for my competitive programming jour
   - If a problem consists of a single file, it is simply named with the problem name (e.g., `problem.cpp`).
   - If a problem has multiple associated files (such as whiteboard sketches or multiple solution versions) it's stored in a folder named after the problem. Inside, you might find files like `problem/1.cpp`, `problem/2.cpp`, and `problem/Sketch.png`. Note that these numbered solutions are incremental; `2.cpp` is (usually) an optimized and/or improved version of `1.cpp`. If not, it's just a later retry of the problem. Earlier versions like `1.cpp` may TLE (Time Limit Exceeded) but should still be functionally correct.
 - **Whiteboardings**: PNG files of diagrams and sketches. Importantly, all PNG whiteboardings are embedded with Excalidraw information, allowing you to upload them directly to [Excalidraw](https://excalidraw.com) to access and edit the full vector data. Note that not all problems have associated whiteboards; usually, easier problems do not.
+- **bits/stdc++.h**: This repo also contains a fake `bits/stdc++.h` header used to make `#include <bits/stdc++.h>` work on macOS. That header is never loaded by anything. It just lives here as a reference so in the future I can copy it into the appropriate include folder on a new Mac.
 
 Feel free to explore the directories for specific problem solutions and diagrams.
 

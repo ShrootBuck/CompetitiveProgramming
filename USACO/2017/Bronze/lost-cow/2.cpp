@@ -1,8 +1,5 @@
-#include <cmath>
-#include <cstdio>
-#include <cstdlib>
-#include <iostream>
-#include <string>
+#include <bits/stdc++.h>
+
 using namespace std;
 
 using ll = long long;
