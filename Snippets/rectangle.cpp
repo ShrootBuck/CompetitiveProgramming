@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 
-
 struct Rectangle {
     long long x1, y1, x2, y2;
 
@@ -8,18 +7,18 @@ struct Rectangle {
     Rectangle(long long x1, long long y1, long long x2, long long y2)
         : x1(x1), y1(y1), x2(x2), y2(y2) {}
 
-    long long area() { return (x2 - x1) * (y2 - y1); }
-    long long perimeter() { return 2 * ((x2 - x1) + (y2 - y1)); }
+    long long area() const { return (x2 - x1) * (y2 - y1); }
+    long long perimeter() const { return 2 * ((x2 - x1) + (y2 - y1)); }
 
     bool operator==(const Rectangle& other) const {
         return (x1 == other.x1 && y1 == other.y1 && x2 == other.x2 && y2 == other.y2);
     }
 
     Rectangle intersection(const Rectangle& other) const {
-        long long inter_x1 = std::max(x1, other.x1);
-        long long inter_y1 = std::max(y1, other.y1);
-        long long inter_x2 = std::min(x2, other.x2);
-        long long inter_y2 = std::min(y2, other.y2);
+        const long long inter_x1 = std::max(x1, other.x1);
+        const long long inter_y1 = std::max(y1, other.y1);
+        const long long inter_x2 = std::min(x2, other.x2);
+        const long long inter_y2 = std::min(y2, other.y2);
 
         if (inter_x1 < inter_x2 && inter_y1 < inter_y2) {
             return Rectangle(inter_x1, inter_y1, inter_x2, inter_y2);
